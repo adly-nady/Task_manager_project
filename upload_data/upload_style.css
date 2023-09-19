@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary: #61C783 ;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.parent{
+    width: 100%;
+    height: 100%;
+    background-image: url(/photo_5987845041474878594_x\ \(1\)\ 1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav{
+    width: 100%;
+    background-color: white;
+    height: 2.5rem;
+    padding: 0 1.5rem;
+    border-radius: 0 0 15px 15px;
+}
+.nav .list{
+    list-style: none;
+    font-size: 1.2rem;
+    color: black;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.nav .list li{
+    display: inline;
+}
+.nav .list button{
+    width: 10%;
+    height: 90%;
+    border-radius: 1rem;
+    border: .5px solid white;
+    background-color: var(--primary);
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+}
+/* ///////// */
+form{
+    width: 100%;
+    height: 50%;
+}
+.generalTitle{
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-weight: 900;
+}
+.generalTitle p{
+    padding: 0 1rem;
+}
+.containerAddPhoto{
+    display: flex;
+    justify-content: center;
+}
+.addPhoto{
+    text-align:center;
+    padding:3%;
+    border:thin solid black;
+    border-radius: 15px;
+    width: 15%;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+label{
+    cursor:pointer;
+    /* padding: 5rem ; */
+}
+form .containerAddPhoto .addPhoto label div{
+    padding: .5rem 0;
+}
+
+/* info */
+.infoContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+}
+.infoContainer .info{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    padding: 1rem;
+}
+.infoContainer .info .addName{
+    width: 100%;
+    height: 2rem;
+}
+.infoContainer .info .uploadInfo{
+    width: 100%;
+    height: 70%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.jobTitle ,.Accepted ,.ProjectsNumber{
+    width:  30%;
+    height: 50%;
+    
+}
+.jobTitle label,.Accepted label,.ProjectsNumber label{
+    font-size: 1.5rem;
+
+}
+.jobTitle input,.Accepted input,.ProjectsNumber input{
+    width: 100%;
+    height: 2rem;
+    border: none;
+    border-radius: 15px;
+    padding-left: 1rem;
+}
+
+
+.info .addName input{
+    width: inherit;
+    height: inherit;
+    border: none;
+    border-radius: 15px;
+    padding-left: 1rem;
+}
+.submitContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.submitContainer .submit input{
+    width: 13rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--primary);
+}
+@media only screen and (max-width: 600px){
+    .nav .list button{
+    width: fit-content;
+    }
+    .infoContainer .info .uploadInfo{
+        display: grid;
+        grid-template-columns: 1fr;
+        /* width: fit-content; */
+    }
+    .jobTitle ,.Accepted ,.ProjectsNumber{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .jobTitle label,.Accepted label,.ProjectsNumber label{
+        font-size: 1rem;
+    }
+    .addPhoto{
+        width: 40%;
+    }
+}
